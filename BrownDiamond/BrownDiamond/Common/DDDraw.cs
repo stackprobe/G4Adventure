@@ -472,25 +472,6 @@ namespace Charlotte.Common
 		//
 		//	copied the source file by https://github.com/stackprobe/Factory/blob/master/SubTools/CopyLib.c
 		//
-		private class DrawPicTask : IDDTask
-		{
-			public DrawInfo Info;
-
-			public bool Routine()
-			{
-				DrawPicMain(this.Info);
-				return false;
-			}
-
-			public void Dispose()
-			{
-				// noop
-			}
-		}
-
-		//
-		//	copied the source file by https://github.com/stackprobe/Factory/blob/master/SubTools/CopyLib.c
-		//
 		private static void DrawPic(DDPicture picture, ILayoutInfo layout_binding)
 		{
 			DrawInfo info = new DrawInfo()
@@ -506,9 +487,10 @@ namespace Charlotte.Common
 			}
 			else
 			{
-				Extra.TL.Add(new DrawPicTask()
+				Extra.TL.Add(() =>
 				{
-					Info = info,
+					DrawPicMain(info);
+					return false;
 				});
 			}
 		}
