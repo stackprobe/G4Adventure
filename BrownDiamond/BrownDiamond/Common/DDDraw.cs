@@ -27,7 +27,7 @@ namespace Charlotte.Common
 			public bool IgnoreError = false;
 			public int A = -1; // -1 == 無効
 			public int BlendAdd = -1; // -1 == 無効
-			public I3Color Bright = null;
+			public I3Color Bright = new I3Color(-1, 0, 0);
 		};
 
 		//
@@ -250,7 +250,7 @@ namespace Charlotte.Common
 			{
 				DX.SetDrawMode(DX.DX_DRAWMODE_NEAREST);
 			}
-			if (info.Extra.Bright != null)
+			if (info.Extra.Bright.R != -1)
 			{
 				SetBright(info.Extra.Bright.R, info.Extra.Bright.G, info.Extra.Bright.B);
 			}
@@ -378,7 +378,7 @@ namespace Charlotte.Common
 			{
 				DX.SetDrawMode(DX.DX_DRAWMODE_BILINEAR);
 			}
-			if (info.Extra.Bright != null)
+			if (info.Extra.Bright.R != -1)
 			{
 				ResetBright();
 			}
@@ -411,13 +411,12 @@ namespace Charlotte.Common
 					b = Math.Max(b, u.RBY);
 					b = Math.Max(b, u.LBY);
 
-					Charlotte.Main01.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect()
-					{
-						L = l,
-						T = t,
-						W = r - l,
-						H = b - t,
-					};
+					Charlotte.Main01.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
+						l,
+						t,
+						r - l,
+						b - t
+						);
 
 					goto endPostDraw;
 				}
@@ -433,13 +432,12 @@ namespace Charlotte.Common
 					double r = u.R;
 					double b = u.B;
 
-					Charlotte.Main01.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect()
-					{
-						L = l,
-						T = t,
-						W = r - l,
-						H = b - t,
-					};
+					Charlotte.Main01.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
+						l,
+						t,
+						r - l,
+						b - t
+						);
 
 					goto endPostDraw;
 				}
@@ -450,13 +448,12 @@ namespace Charlotte.Common
 
 				if (u != null)
 				{
-					Charlotte.Main01.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect()
-					{
-						L = u.X,
-						T = u.Y,
-						W = info.Picture.Get_W(),
-						H = info.Picture.Get_H(),
-					};
+					Charlotte.Main01.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
+						u.X,
+						u.Y,
+						info.Picture.Get_W(),
+						info.Picture.Get_H()
+						);
 
 					goto endPostDraw;
 				}
