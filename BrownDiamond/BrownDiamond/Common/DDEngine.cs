@@ -168,7 +168,7 @@ namespace Charlotte.Common
 
 			// app > @ leave EachFrame
 
-			Charlotte.Main01.NamedRect.Clear();
+			Charlotte.Mains.NamedRect.Clear();
 
 			// < app
 		}

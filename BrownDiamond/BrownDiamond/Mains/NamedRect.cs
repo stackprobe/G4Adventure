@@ -5,7 +5,7 @@ using System.Text;
 using Charlotte.Tools;
 using Charlotte.Common;
 
-namespace Charlotte.Main01
+namespace Charlotte.Mains
 {
 	public static class NamedRect
 	{

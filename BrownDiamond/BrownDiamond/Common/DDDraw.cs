@@ -411,7 +411,7 @@ namespace Charlotte.Common
 					b = Math.Max(b, u.RBY);
 					b = Math.Max(b, u.LBY);
 
-					Charlotte.Main01.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
+					Charlotte.Mains.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
 						l,
 						t,
 						r - l,
@@ -432,7 +432,7 @@ namespace Charlotte.Common
 					double r = u.R;
 					double b = u.B;
 
-					Charlotte.Main01.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
+					Charlotte.Mains.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
 						l,
 						t,
 						r - l,
@@ -448,7 +448,7 @@ namespace Charlotte.Common
 
 				if (u != null)
 				{
-					Charlotte.Main01.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
+					Charlotte.Mains.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
 						u.X,
 						u.Y,
 						info.Picture.Get_W(),

@@ -6,7 +6,7 @@ using Charlotte.Common;
 using DxLibDLL;
 using Charlotte.Tools;
 
-namespace Charlotte.Main01
+namespace Charlotte.Mains
 {
 	public static class Title
 	{
