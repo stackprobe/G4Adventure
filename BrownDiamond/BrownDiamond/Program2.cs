@@ -7,6 +7,7 @@ using Charlotte.Common;
 using Charlotte.Tools;
 using Charlotte.Tests;
 using Charlotte.Mains;
+using Charlotte.Tests.Games;
 
 namespace Charlotte
 {
@@ -72,7 +73,8 @@ namespace Charlotte
 		private void Main4()
 		{
 			//new Test0001().Test01();
-			Title.TitleMain();
+			//Title.TitleMain();
+			new GameTest().Test01();
 		}
 	}
 }

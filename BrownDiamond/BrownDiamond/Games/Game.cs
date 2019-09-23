@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Charlotte.Common;
 
 namespace Charlotte.Games
 {
@@ -20,12 +21,29 @@ namespace Charlotte.Games
 
 		public void Dispose()
 		{
+			this.RoomScreen.Dispose();
+			this.RoomScreen = null;
+
 			I = null;
 		}
 
+		private DDSubScreen RoomScreen = new DDSubScreen(Consts.ROOM_W, Consts.ROOM_H);
+
 		public void Perform()
 		{
-			//
+			for (; ; )
+			{
+				using (this.RoomScreen.Section())
+				{
+					this.Room.DrawRoom();
+				}
+
+				// Draw ...
+
+				DDDraw.DrawSimple(this.RoomScreen.ToPicture(), 0, 0);
+
+				DDEngine.EachFrame();
+			}
 		}
 	}
 }
