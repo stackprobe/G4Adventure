@@ -411,12 +411,12 @@ namespace Charlotte.Common
 					b = Math.Max(b, u.RBY);
 					b = Math.Max(b, u.LBY);
 
-					Charlotte.Mains.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
+					Charlotte.Mains.NamedCrashMgr.LastDrawedCrash = Charlotte.Game3Common.CrashUtils.Rect(new D4Rect(
 						l,
 						t,
 						r - l,
 						b - t
-						);
+						));
 
 					goto endPostDraw;
 				}
@@ -432,12 +432,12 @@ namespace Charlotte.Common
 					double r = u.R;
 					double b = u.B;
 
-					Charlotte.Mains.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
+					Charlotte.Mains.NamedCrashMgr.LastDrawedCrash = Charlotte.Game3Common.CrashUtils.Rect(new D4Rect(
 						l,
 						t,
 						r - l,
 						b - t
-						);
+						));
 
 					goto endPostDraw;
 				}
@@ -448,12 +448,12 @@ namespace Charlotte.Common
 
 				if (u != null)
 				{
-					Charlotte.Mains.NamedRect.LastDrawedRect = new Charlotte.Tools.D4Rect(
+					Charlotte.Mains.NamedCrashMgr.LastDrawedCrash = Charlotte.Game3Common.CrashUtils.Rect(new D4Rect(
 						u.X,
 						u.Y,
 						info.Picture.Get_W(),
 						info.Picture.Get_H()
-						);
+						));
 
 					goto endPostDraw;
 				}

@@ -230,13 +230,13 @@ namespace Charlotte.Mains
 				DDDraw.DrawBegin(Ground.I.Picture.TitleBtnBack, TGS_BACK_X, TGS_BACK_Y);
 				DDDraw.DrawZoom(1.0 + selRateBack * 0.15);
 				DDDraw.DrawEnd();
-				NamedRect.SetLastDrawedRectName("BACK");
+				NamedCrashMgr.AddLastDrawedCrash("BACK");
 
 				// <---- 描画
 
 				DDMouse.UpdatePos();
 
-				string pointingName = NamedRect.GetRectName(DDMouse.X, DDMouse.Y);
+				string pointingName = NamedCrashMgr.GetName(DDMouse.X, DDMouse.Y);
 
 				if (pointingName == "BACK")
 					DDUtils.Approach(ref selRateBack, 1.0, 0.85);
@@ -342,7 +342,7 @@ namespace Charlotte.Mains
 					DDDraw.DrawBegin(Ground.I.Picture.TitleItemContinue, TGS_CONTINUE_X, TGS_CONTINUE_Y);
 					DDDraw.DrawZoom(1.0 + selRateContinue * 0.1);
 					DDDraw.DrawEnd();
-					NamedRect.SetLastDrawedRectName("CONTINUE");
+					NamedCrashMgr.AddLastDrawedCrash("CONTINUE");
 				}
 				else
 				{
@@ -353,17 +353,17 @@ namespace Charlotte.Mains
 				DDDraw.DrawBegin(Ground.I.Picture.TitleItemStart, TGS_START_X, TGS_START_Y);
 				DDDraw.DrawZoom(1.0 + selRateStart * 0.1);
 				DDDraw.DrawEnd();
-				NamedRect.SetLastDrawedRectName("START");
+				NamedCrashMgr.AddLastDrawedCrash("START");
 				DDDraw.DrawBegin(Ground.I.Picture.TitleBtnBack, TGS_BACK_X, TGS_BACK_Y);
 				DDDraw.DrawZoom(1.0 + selRateBack * 0.15);
 				DDDraw.DrawEnd();
-				NamedRect.SetLastDrawedRectName("BACK");
+				NamedCrashMgr.AddLastDrawedCrash("BACK");
 
 				// <---- 描画
 
 				DDMouse.UpdatePos();
 
-				string pointingName = NamedRect.GetRectName(DDMouse.X, DDMouse.Y);
+				string pointingName = NamedCrashMgr.GetName(DDMouse.X, DDMouse.Y);
 
 				if (pointingName == "CONTINUE")
 					DDUtils.Approach(ref selRateContinue, 1.0, 0.8);
@@ -601,21 +601,21 @@ namespace Charlotte.Mains
 					DDDraw.DrawBegin(Ground.I.Picture.TitleBtnStart, TITLE_BTN_START_X, TITLE_BTN_START_Y);
 					DDDraw.DrawZoom(1.0 + selRateStart * 0.2);
 					DDDraw.DrawEnd();
-					NamedRect.SetLastDrawedRectName("START");
+					NamedCrashMgr.AddLastDrawedCrash("START");
 					DDDraw.DrawBegin(Ground.I.Picture.TitleBtnConfig, TITLE_BTN_CONFIG_X, TITLE_BTN_CONFIG_Y);
 					DDDraw.DrawZoom(1.0 + selRateConfig * 0.15);
 					DDDraw.DrawEnd();
-					NamedRect.SetLastDrawedRectName("CONFIG");
+					NamedCrashMgr.AddLastDrawedCrash("CONFIG");
 					DDDraw.DrawBegin(Ground.I.Picture.TitleBtnExit, TITLE_BTN_EXIT_X, TITLE_BTN_EXIT_Y);
 					DDDraw.DrawZoom(1.0 + selRateExit * 0.15);
 					DDDraw.DrawEnd();
-					NamedRect.SetLastDrawedRectName("EXIT");
+					NamedCrashMgr.AddLastDrawedCrash("EXIT");
 
 					// <---- 描画
 
 					DDMouse.UpdatePos();
 
-					string pointingName = NamedRect.GetRectName(DDMouse.X, DDMouse.Y);
+					string pointingName = NamedCrashMgr.GetName(DDMouse.X, DDMouse.Y);
 
 					if (pointingName == "START")
 						DDUtils.Approach(ref selRateStart, 1.0, 0.85);

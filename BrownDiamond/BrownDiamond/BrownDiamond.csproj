@@ -112,7 +112,11 @@
     <Compile Include="Game3Common\CResource.cs" />
     <Compile Include="Game3Common\SceneKeeper.cs" />
     <Compile Include="Game3Common\SlideUtils.cs" />
-    <Compile Include="Mains\NamedRect.cs" />
+    <Compile Include="Games\Game.cs" />
+    <Compile Include="Games\IRoom.cs" />
+    <Compile Include="Games\Rooms\Room0001.cs" />
+    <Compile Include="Mains\NamedCrash.cs" />
+    <Compile Include="Mains\NamedCrashMgr.cs" />
     <Compile Include="Mains\PrintByFont.cs" />
     <Compile Include="Mains\Title.cs" />
     <Compile Include="Ground.cs" />
