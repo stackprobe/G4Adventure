@@ -5,6 +5,8 @@ using System.Text;
 using Charlotte.Common;
 using DxLibDLL;
 using Charlotte.Tools;
+using Charlotte.Games;
+using Charlotte.Games.Rooms;
 
 namespace Charlotte.Mains
 {
@@ -255,9 +257,21 @@ namespace Charlotte.Mains
 
 					if (DDUtils.IsOut(new D2Point(x, y), D4Rect.LTRB(330, 90, 640, 360)) == false) // 入口
 					{
-						// TODO
+
+
 
 						SaveData.HasSaveData = true; // kari
+
+						using (Game game = new Game())
+						{
+							game.Room = new Room0001();
+							game.Perform();
+						}
+
+						// TODO TitleMain()まで戻るべき
+
+
+
 					}
 				}
 			}

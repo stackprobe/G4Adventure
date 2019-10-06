@@ -31,8 +31,15 @@ namespace Charlotte.Games
 
 		public void Perform()
 		{
+			DDEngine.FreezeInput();
+
 			for (; ; )
 			{
+				DDMouse.UpdatePos();
+
+				if (DDMouse.L.GetInput() == 1)
+					break;
+
 				using (this.RoomScreen.Section())
 				{
 					this.Room.DrawRoom();

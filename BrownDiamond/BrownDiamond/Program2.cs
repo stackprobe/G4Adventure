@@ -85,8 +85,8 @@ namespace Charlotte
 		private void Main4_Debug()
 		{
 			//new Test0001().Test01();
-			//Title.TitleMain();
-			new GameTest().Test01();
+			Title.TitleMain();
+			//new GameTest().Test01();
 		}
 
 		private void Main4_Release()
