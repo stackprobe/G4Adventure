@@ -72,9 +72,26 @@ namespace Charlotte
 
 		private void Main4()
 		{
+			if (ProcMain.ArgsReader.ArgIs("/D"))
+			{
+				Main4_Debug();
+			}
+			else
+			{
+				Main4_Release();
+			}
+		}
+
+		private void Main4_Debug()
+		{
 			//new Test0001().Test01();
 			//Title.TitleMain();
 			new GameTest().Test01();
+		}
+
+		private void Main4_Release()
+		{
+			Title.TitleMain();
 		}
 	}
 }
