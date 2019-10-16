@@ -40,7 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Chocolate">
-      <HintPath>..\..\..\..\CSharp\Chocolate\Chocolate\bin\Release\Chocolate.dll</HintPath>
+      <HintPath>C:\Dev\CSharp\Chocolate\Chocolate\bin\Release\Chocolate.dll</HintPath>
     </Reference>
     <Reference Include="DxLibDotNet">
       <HintPath>C:\Dat\DxLibDotNet\3_20f\DxLibDotNet.dll</HintPath>
