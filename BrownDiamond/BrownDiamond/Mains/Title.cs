@@ -186,8 +186,8 @@ namespace Charlotte.Mains
 					{
 						break;
 					}
-					DDGround.MusicVolume = DoubleTools.Range(DDGround.MusicVolume, 0.0, 1.0);
-					DDGround.SEVolume = DoubleTools.Range(DDGround.SEVolume, 0.0, 1.0);
+					DDGround.MusicVolume = DoubleTools.ToRange(DDGround.MusicVolume, 0.0, 1.0);
+					DDGround.SEVolume = DoubleTools.ToRange(DDGround.SEVolume, 0.0, 1.0);
 				}
 				DrawWall();
 				DrawTitleBack();
