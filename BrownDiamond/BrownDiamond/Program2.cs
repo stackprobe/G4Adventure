@@ -36,7 +36,7 @@ namespace Charlotte
 			{
 				// Font >
 
-				DDFontRegister.Add(@"riitf\RiiT_F.otf");
+				DDFontRegister.Add(@"Etoile\BrownDiamond\riitf\RiiT_F.otf");
 
 				// < Font
 
