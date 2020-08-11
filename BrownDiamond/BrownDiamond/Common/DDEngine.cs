@@ -70,10 +70,6 @@ namespace Charlotte.Common
 		//
 		public static void EachFrame()
 		{
-			// app > @ enter EachFrame
-
-			// < app
-
 			if (DDSEUtils.EachFrame() == false)
 			{
 				DDMusicUtils.EachFrame();
@@ -104,10 +100,6 @@ namespace Charlotte.Common
 				}
 			}
 
-			// app > @ before ScreenFlip
-
-			// < app
-
 			GC.Collect(0);
 
 			FrameProcessingMillis = (int)(DDUtils.GetCurrTime() - FrameStartTime);
@@ -128,10 +120,6 @@ namespace Charlotte.Common
 			}
 
 			// < DxLib
-
-			// app > @ after ScreenFlip
-
-			// < app
 
 			CheckHz();
 
@@ -171,6 +159,8 @@ namespace Charlotte.Common
 			Charlotte.Mains.NamedCrashMgr.Clear();
 
 			// < app
+
+			DDAdditionalEvents.PostEachFrame();
 		}
 
 		//
