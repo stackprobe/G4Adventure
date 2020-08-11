@@ -67,6 +67,10 @@ namespace Charlotte
 				// 新しい項目をここへ追加...
 			};
 
+			DDAdditionalEvents.PostDrawPicMain = () =>
+			{
+			};
+
 			DDMain2.Perform(Main4);
 		}
 
