@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Charlotte.Game3Common;
 using Charlotte.Tools;
+using Charlotte.Common.Options;
 
 namespace Charlotte.Mains
 {
 	public class NamedCrash
 	{
 		public string Name;
-		public Crash Crash;
+		public DDCrash Crash;
 
-		public NamedCrash(string name, Crash crash)
+		public NamedCrash(string name, DDCrash crash)
 		{
 			this.Name = name;
 			this.Crash = crash;

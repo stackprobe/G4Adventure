@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Charlotte.Game3Common;
 using Charlotte.Tools;
+using Charlotte.Common.Options;
 
 namespace Charlotte.Mains
 {
@@ -16,7 +16,7 @@ namespace Charlotte.Mains
 			Crashes.Clear();
 		}
 
-		public static Crash LastDrawedCrash;
+		public static DDCrash LastDrawedCrash;
 
 		public static void AddLastDrawedCrash(string name)
 		{
@@ -35,7 +35,7 @@ namespace Charlotte.Mains
 
 		public static string GetName(D2Point pt, string defval = null)
 		{
-			Crash ptCrash = CrashUtils.Point(pt);
+			DDCrash ptCrash = DDCrashUtils.Point(pt);
 
 			foreach (NamedCrash crash in Crashes)
 				if (crash.Crash.IsCrashed(ptCrash))
