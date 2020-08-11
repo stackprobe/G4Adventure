@@ -460,8 +460,6 @@ namespace Charlotte.Common
 			;
 
 			// < app
-
-			DDAdditionalEvents.PostDrawPicMain();
 		}
 
 		//

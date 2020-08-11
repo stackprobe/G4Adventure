@@ -159,8 +159,6 @@ namespace Charlotte.Common
 			Charlotte.Mains.NamedCrashMgr.Clear();
 
 			// < app
-
-			DDAdditionalEvents.PostEachFrame();
 		}
 
 		//
