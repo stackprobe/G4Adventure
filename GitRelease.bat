@@ -1,5 +1,5 @@
 IF NOT EXIST .\GitRelease.bat GOTO END
 CALL qq
-C:\Factory\SubTools\GitFactory.exe /ow . C:\huge\GitHub\BrownDiamond
+C:\Factory\SubTools\GitFactory.exe /ow . C:\huge\GitHub\G4Adventure
 rem CALL C:\var\go.bat
 :END

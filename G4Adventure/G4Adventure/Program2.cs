@@ -36,7 +36,7 @@ namespace Charlotte
 			{
 				// Font >
 
-				DDFontRegister.Add(@"Etoile\BrownDiamond\riitf\RiiT_F.otf");
+				DDFontRegister.Add(@"Etoile\G4Adventure\riitf\RiiT_F.otf");
 
 				// < Font
 
