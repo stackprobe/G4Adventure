@@ -27,46 +27,6 @@ namespace Charlotte
 
 		private void Main3()
 		{
-			DDAdditionalEvents.Ground_INIT = () =>
-			{
-				DDGround.RO_MouseDispMode = true;
-			};
-
-			DDAdditionalEvents.PostGameStart = () =>
-			{
-				// Font >
-
-				DDFontRegister.Add(@"Etoile\G4Adventure\riitf\RiiT_F.otf");
-
-				// < Font
-
-				Ground.I = new Ground();
-			};
-
-			DDAdditionalEvents.Save = lines =>
-			{
-				lines.Add(DateTime.Now.ToString()); // Dummy
-				lines.Add(DateTime.Now.ToString()); // Dummy
-				lines.Add(DateTime.Now.ToString()); // Dummy
-
-				lines.Add("" + (SaveData.HasSaveData ? 1 : 0));
-
-				// 新しい項目をここへ追加...
-			};
-
-			DDAdditionalEvents.Load = lines =>
-			{
-				int c = 0;
-
-				DDUtils.Noop(lines[c++]); // Dummy
-				DDUtils.Noop(lines[c++]); // Dummy
-				DDUtils.Noop(lines[c++]); // Dummy
-
-				SaveData.HasSaveData = int.Parse(lines[c++]) != 0;
-
-				// 新しい項目をここへ追加...
-			};
-
 			DDMain2.Perform(Main4);
 		}
 

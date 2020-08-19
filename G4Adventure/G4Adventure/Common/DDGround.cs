@@ -121,7 +121,7 @@ namespace Charlotte.Common
 
 			// app > @ INIT
 
-			//GameGround.RO_MouseDispMode = true;
+			DDGround.RO_MouseDispMode = true;
 
 			// < app
 		}

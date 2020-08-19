@@ -80,9 +80,11 @@ namespace Charlotte.Common
 
 				// app > @ Save
 
-				lines.Add("Donut3-SaveData"); // Dummy
-				lines.Add("Donut3-SaveData"); // Dummy
-				lines.Add("Donut3-SaveData"); // Dummy
+				//lines.Add("G4Adventure-SaveData"); // Dummy
+
+				lines.Add("" + (SaveData.HasSaveData ? 1 : 0));
+
+				// 新しい項目をここへ追加...
 
 				// < app
 
@@ -177,9 +179,11 @@ namespace Charlotte.Common
 				{
 					// app > @ Load
 
-					DDUtils.Noop(lines[c++]); // Dummy
-					DDUtils.Noop(lines[c++]); // Dummy
-					DDUtils.Noop(lines[c++]); // Dummy
+					//DDUtils.Noop(lines[c++]); // Dummy
+
+					SaveData.HasSaveData = int.Parse(lines[c++]) != 0;
+
+					// 新しい項目をここへ追加...
 
 					// < app
 				}
