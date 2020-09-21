@@ -5,7 +5,7 @@ using System.Text;
 using Charlotte.Tools;
 using Charlotte.Common.Options;
 
-namespace Charlotte.Mains
+namespace Charlotte.Games
 {
 	public static class NamedCrashMgr
 	{

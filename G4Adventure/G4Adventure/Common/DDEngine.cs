@@ -162,7 +162,7 @@ namespace Charlotte.Common
 
 			// app > @ leave EachFrame
 
-			Charlotte.Mains.NamedCrashMgr.Clear();
+			Charlotte.Games.NamedCrashMgr.Clear();
 
 			// < app
 		}

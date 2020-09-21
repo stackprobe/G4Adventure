@@ -118,10 +118,10 @@
     <Compile Include="Games\Game.cs" />
     <Compile Include="Games\IRoom.cs" />
     <Compile Include="Games\Rooms\Room0001.cs" />
-    <Compile Include="Mains\NamedCrash.cs" />
-    <Compile Include="Mains\NamedCrashMgr.cs" />
-    <Compile Include="Mains\PrintByFont.cs" />
-    <Compile Include="Mains\Title.cs" />
+    <Compile Include="Games\NamedCrash.cs" />
+    <Compile Include="Games\NamedCrashMgr.cs" />
+    <Compile Include="Games\PrintByFont.cs" />
+    <Compile Include="Games\Title.cs" />
     <Compile Include="Ground.cs" />
     <Compile Include="MainWin.cs">
       <SubType>Form</SubType>

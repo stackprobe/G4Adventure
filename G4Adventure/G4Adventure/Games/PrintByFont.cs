@@ -5,7 +5,7 @@ using System.Text;
 using Charlotte.Common;
 using DxLibDLL;
 
-namespace Charlotte.Mains
+namespace Charlotte.Games
 {
 	public static class PrintByFont
 	{

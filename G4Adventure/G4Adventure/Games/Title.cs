@@ -8,7 +8,7 @@ using Charlotte.Tools;
 using Charlotte.Games;
 using Charlotte.Games.Rooms;
 
-namespace Charlotte.Mains
+namespace Charlotte.Games
 {
 	public static class Title
 	{
